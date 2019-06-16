@@ -6,6 +6,7 @@ import { geturl } from "../subjectList";
 const Subject = props => {
   const id = props.match.params.subjectId;
   let typeOfPaper = 'Major';
+  const str = `/exambaba/${geturl(id,year,paper)}`;
 
   return (
     <div className="subject">
@@ -21,7 +22,7 @@ const Subject = props => {
                 <li className="subject_paper">
                   <span>{typeOfPaper}</span>
                   <Link to={`${geturl(id,year,paper)}`} >
-                  <img src={geturl(id, year, paper)} alt="" className="subject_thumbnail"/></Link>
+                  <img src={str} alt="" className="subject_thumbnail"/></Link>
                 </li>
               )})}
             </ul>

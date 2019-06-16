@@ -19,7 +19,7 @@ function shorten(branch, fullName) {
 }
 
 function geturl(subject, year, exam) {
-  return `/exambaba/images/${subject}${year}m${exam}.jpg`;
+  return `/images/${subject}${year}m${exam}.jpg`;
 }
 
 export default subjectList;
