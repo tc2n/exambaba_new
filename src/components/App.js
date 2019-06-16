@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+// eslint-disable-next-line
+import { BrowserRouter, Route, Switch, HashRouter } from "react-router-dom";
 import "../css/App.scss";
 import Header from "./Header";
 import Search from "./Search";
@@ -17,7 +18,7 @@ class App extends React.Component {
   }
   render() {
     return (
-      <BrowserRouter basename="/exambaba">
+      <HashRouter>
         <Header />
         <Switch>
           <Route exact path="/" component={Search} />
@@ -30,7 +31,7 @@ class App extends React.Component {
           <Route exact path="/images/:url" component={ImageView} />
           <Route component={NotFound} />
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }
