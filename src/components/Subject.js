@@ -35,3 +35,4 @@ const Subject = props => {
 export default Subject;
 //Object.keys(x.subjects["dbms"]).map(year => console.log(x.subjects["dbms"][year]));
 // onClick={handleClick(geturl(id,year, paper), hist)}
+//use this on line 24 src={`/${geturl(id,year,paper)}`}
