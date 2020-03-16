@@ -21,7 +21,7 @@ const Subject = props => {
                 <li className="subject_paper">
                   <span>{typeOfPaper}</span>
                   <Link to={`${geturl(id,year,paper)}`} >
-                  <img src={`/exambaba/${geturl(id,year,paper)}`} alt="" className="subject_thumbnail"/></Link>
+                  <img src={`${geturl(id,year,paper)}`} alt="" className="subject_thumbnail"/></Link>
                 </li>
               )})}
             </ul>
