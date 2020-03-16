@@ -57,7 +57,7 @@ class Search extends React.Component {
           </select>
           <input
             type="text"
-            placeholder="Search Subject"
+            placeholder="Enter Subject Name..."
             list="subjects"
             onChange={this.handleSubjectChange}
             value={this.state.subject}
@@ -75,7 +75,7 @@ class Search extends React.Component {
           </button>
         </form>
       </div>
-      <div className="footer"><span>Original idea by <a href="http://github.com/mbj36">Mohit Kumar Bajoria</a>.&ensp;&ensp; <a href="http://github.com/tc2n/exambaba">Github Repo</a></span></div></>
+      <div className="footer"><span>Original idea by <a href="http://github.com/mbj36">Mohit Kumar Bajoria</a>.&ensp;&ensp; <a href="http://github.com/tc2n/exambaba_new">Github Repo</a></span></div></>
     );
   }
 }
