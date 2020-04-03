@@ -2,7 +2,7 @@
   --color-main: #eee;
   --color-main-dark: #ddd;
   --color-white: #fff;
-  --color-primary: #2F2C51;
+  --color-primary: #121212;
   --color-white-60: rgba(255,255,255,0.6);
   --color-white-40: rgba(255,255,255,0.4);
   --color-accent: #B2F4DC;
@@ -17,9 +17,8 @@ $bp-900: 56.25em; //900px
   max-width: 120rem;
   margin: 8rem auto;
   background-color: var(--color-primary);
-  box-shadow:  3px 3px 30px #131220, 
-             -3px -3px 30px #4b4682;
   height: 80vh;
+  border: solid 1px #444;
   border-radius: 2rem;
   overflow: scroll;
   &::-webkit-scrollbar {
@@ -41,7 +40,7 @@ $bp-900: 56.25em; //900px
 }
 
 .header {
-  background: linear-gradient(0deg, var(--color-primary), #2F2C5f);
+  background: linear-gradient(0deg, var(--color-primary), #101010);
   height: 6rem;
   text-align: center;
   margin-bottom: 2rem;

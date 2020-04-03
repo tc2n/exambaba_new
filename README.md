@@ -7,9 +7,11 @@ Just search your subject.
 
 ----
 ## Contribution guide
-Yet to be added
+Yet to be added:
+- Move photos from assets to some CDN
+- Some way Students can upload papers
 
-> Markdown is a lightweight markup language, originally created by John Gruber and Aaron Swartz allowing people "to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML)".
+
 
 ----
 ## Run Locally on your system
