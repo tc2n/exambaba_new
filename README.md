@@ -4,9 +4,12 @@ Exambaba is created to help the student of SMVDU for getting previous year paper
 Just search your subject.
 
 ### [Visit Site](https://exambaba.netlify.com)
+----
+## Contribution Guide
+TO-DO
 
 ----
-## Contribution guide
+### TO-DO
 Yet to be added:
 - Move photos from assets to some CDN
 - Some way Students can upload papers
