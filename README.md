@@ -17,11 +17,6 @@ Just search your subject.
 To contibute exam papers of your branch to Exambaba, follow these steps:
 -Firstly fork this repository by clicking on `fork` on top right of this page.
 - Now head to the `contribute` folder inside `public` folder
-```mermaid
-graph LR
-A[public]  --> B[contribute] 
-B-->C[cse/ mech /ece]
-```
 - Go inside your branch folder, *if you are adding a new branch then create a new folder*
 - Click on `Upload` button and add your photos of exam paper here.
 - Then scroll down and select `create a new branch`, enter anything in branch name and then click on `Propose Changes`
