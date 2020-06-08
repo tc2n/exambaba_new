@@ -2,7 +2,15 @@
   --color-main: #eee;
   --color-main-dark: #ddd;
   --color-white: #fff;
-  --color-primary: #121212;
+
+  --color-primary: #1e2025;
+  --color-text-emphasised: rgba(255,255,255, 0.87);
+  --color-text-secondary: rgba(255,255,255, 0.60);
+  --color-search-box: #16181c;
+  --color-search-placeholder: #575a5d;
+  --color-links: #2d99f6;
+  --color-cards: rgba(255,255,255, 0.05);
+
   --color-white-60: rgba(240,240,240,0.9);
   --color-white-40: rgba(255,255,255,0.4);
   --color-accent: #B2F4DC;
@@ -14,11 +22,12 @@ $bp-1200: 75em; //1200px
 $bp-900: 56.25em; //900px
 
 #root {
-  max-width: 120rem;
-  margin: 8rem auto;
+  max-width: 115rem;
+  margin: 5rem auto;
   background-color: var(--color-primary);
-  height: 80vh;
-  border: solid 1px #444;
+  height: 85vh;
+  // border: solid 1px #444;
+  box-shadow: 0 -.2rem 2rem rgba(0, 0, 0, 0.1);
   border-radius: 2rem;
   overflow: scroll;
   &::-webkit-scrollbar {
@@ -40,7 +49,7 @@ $bp-900: 56.25em; //900px
 }
 
 .header {
-  background: linear-gradient(0deg, var(--color-primary), #101010);
+  background-color:var(--color-primary) ;
   height: 6rem;
   text-align: center;
   margin-bottom: 2rem;
@@ -60,11 +69,11 @@ $bp-900: 56.25em; //900px
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  color: var(--color-white-60);
+  color: var(--color-text-secondary);
   font-size: 1.3rem;
   & a:link, a:active, a:focus, a:visited {
     text-decoration: none;
-    color: var(--color-accent);
+    color: var(--color-links);
   }
   @media only screen and (max-width:$bp-900) {
     font-size: 1rem;
@@ -78,11 +87,12 @@ $bp-900: 56.25em; //900px
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
-  color: #eee;
+  color: var(--color-text-secondary);
   &_details {
-    & u {
+    & h1 {
       font-weight: 600;
       font-size: 2.0rem;
+      color: var(--color-text-emphasised);
     }
     font-size: 1.4rem;
   }
@@ -98,9 +108,9 @@ $bp-900: 56.25em; //900px
   }
   &_select {
     border: none;
-    background-color: var(--color-white-60);
+    background-color: var(--color-search-box);
     border-radius: 500px 0 0 500px;
-    color: var(--color-primary);
+    color: var(--color-text-emphasised);
     &:active {
       outline: none;
     }
@@ -112,10 +122,11 @@ $bp-900: 56.25em; //900px
     width: 35vw;
     border: none;
     transition: width 0.3s;
-    background-color: var(--color-white-60);
+    background-color: var(--color-search-box);
+    color: var(--color-text-emphasised);
 
     &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-      color: var(--color-primary);
+      color: var(--color-search-placeholder);
       opacity: 1; /* Firefox */
     }
 
@@ -127,7 +138,7 @@ $bp-900: 56.25em; //900px
   &_button {
     width: 5rem;
     border: none;
-    background-color: var(--color-white-60);
+    background-color: var(--color-search-box);
     border-radius: 0 500px 500px 0;
     &:focus,
     &:active,
@@ -136,7 +147,7 @@ $bp-900: 56.25em; //900px
     }
   }
   &_logo {
-    fill: var(--color-primary);
+    fill: var(--color-text-emphasised);
     height: 100%;
     width: 100%;
   }
@@ -153,17 +164,18 @@ $bp-900: 56.25em; //900px
     text-transform: uppercase;
     font-size: 5rem;
     margin-bottom: 2rem;
-    color: var(--color-white-60);
+    color: var(--color-text-emphasised);
   }
 
   &_year {
-    border: solid 0.1rem var(--color-white-40);
+    // border: solid 0.1rem var(--color-white-40);
+    background-color: var(--color-cards);
     border-radius: 2rem;
     padding: 2rem;
     text-align: center;
     width: 90%;
     margin: 1rem;
-    color: var(--color-white-60);
+    color: var(--color-text-secondary);
     &_name {
       font-size: 3rem;
       margin-bottom: 1rem;
@@ -183,21 +195,21 @@ $bp-900: 56.25em; //900px
   &_paper {
     position: relative;
     font-size: 2rem;
-    color: var(--color-white);
+    color: var(--color-text-secondary);
     & span {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 3;
-      transition: opcity 0.2s, width 0.5s;
+      // transition: opacity 0.2s;
     }
     &:hover span {
       opacity: 0;
       width: 0;
     }
     &:hover img {
-      filter: opacity(1);
+      filter: brightness(100%);
     }
     
   }
@@ -208,8 +220,9 @@ $bp-900: 56.25em; //900px
     width: 25rem;
     border: solid 0.1rem var(--color-white-40);
     border-radius: 10px;
-    -webkit-filter: opacity(.1);
-    filter: opacity(.3);
+    // -webkit-filter: opacity(.3);
+    // filter: opacity(.3);
+    filter: brightness(40%);
     transition: filter 0.3s;
   }
 }

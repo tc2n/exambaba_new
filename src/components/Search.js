@@ -39,7 +39,7 @@ class Search extends React.Component {
       <>
       <div className="search">
         <p className="search_details">
-          <u>Welcome to Ex@mbaba</u> <br/><br /> Exambaba is created to help the student of
+          <h1>Welcome to Exambaba SMVDU</h1> <br/><br /> Exambaba is created to help the student of
           SMVDU for getting previous year papers for all the three branches
           (C.S.E, M.E, E.C.E).<br/>Just search your subject.
         </p>
@@ -75,7 +75,7 @@ class Search extends React.Component {
           </button>
         </form>
       </div>
-      <div className="footer"><span>Original idea by <a href="http://github.com/mbj36">Mohit Kumar Bajoria</a>.&ensp;&ensp; <a href="http://github.com/tc2n/exambaba_new">Github Repo</a></span></div></>
+      <div className="footer"><span>Original idea by <a href="http://github.com/mbj36">Mohit Kumar Bajoria</a> • <a href="http://github.com/tc2n/exambaba_new">Contribute</a></span></div></>
     );
   }
 }
