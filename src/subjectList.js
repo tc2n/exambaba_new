@@ -1,5 +1,5 @@
 const subjectList = {
-  cse: [ "computer organisation and architecture", "computer networks and commutication", "programming with c", "compiler design", "calculus and linear algebra", "engineering drawing / graphics", "data structures", "discrete mathmatics", "fundamental of physics", "java programming", "microprocessor and interfacing", "object oriented programming", "operating system", "theory of computation", "discourse of human virtues", "digital electronics", "computer network security", "internet of things", "introduction to logic", "artificial intelligence", "block chain coding", "marketing amnagement", "professional ethics", "soft computing", "software engineering", "mobile communications", "cloud computing", "high performance computing", "design and analsis of algorithms", "database management systems", "machine learning", "data science and analytics", "metaphysics of human existence"],
+  cse: [ "computer organisation and architecture", "computer networks and commutication", "programming with c", "compiler design", "calculus and linear algebra", "engineering drawing / graphics", "data structures", "discrete mathmatics", "fundamental of physics", "java programming", "microprocessor and interfacing", "object oriented programming", "operating system", "theory of computation", "discourse of human virtues", "digital electronics", "computer network security", "internet of things", "introduction to logic", "artificial intelligence", "block chain coding", "marketing amnagement", "professional ethics", "soft computing", "software engineering", "mobile communications", "cloud computing", "high performance computing", "design and analysis of algorithms", "database management systems", "machine learning", "data science and analytics", "metaphysics of human existence"],
 
   me: ["programming in c", "calculus and linear algebra", "engineering mechanics", "engineering drawing / graphics", "engineering / modern physics", "material science and engineering", "vector calculus and differential engineering", "thermodynamics", "manufacturing processes", "kinematics of machines", "strength of materials", "fluid mechanics", "integral transforms and complex analysis", "machine design", "thermal engineering", "fluid machines", "engineering mathematics II", "programming with python", "discourse of human virtues", "professional communication", "introduction to logic", "engineering mathematics I"],
 
@@ -20,9 +20,28 @@ function shorten(branch, fullName) {
   return shortNames[branch][index];
 }
 
+function longen(shortName) {
+  let index = shortNames['cse'].findIndex(x => x===shortName)
+  if(index===-1){
+      index = shortNames['me'].findIndex(x => x===shortName)
+      if(index===-1) {
+        index = shortNames['ece'].findIndex(x => x===shortName)
+        if(index===-1){
+            return shortName;
+        } else {
+          return subjectList['ece'][index];
+        }
+      } else {
+        return subjectList['me'][index];
+      }
+  } else {
+    return subjectList['cse'][index];
+  }
+}
+
 function geturl(subject, year, exam) {
   return `/images/${subject}${year}m${exam}.jpg`;
 }
 
 export default subjectList;
-export { shorten, geturl };
+export { shorten, geturl, longen };

@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 
-import { geturl } from "../subjectList";
+import { geturl, longen } from "../subjectList";
 
 const Subject = props => {
   const id = props.match.params.subjectId;
@@ -9,7 +9,7 @@ const Subject = props => {
 
   return (
     <div className="subject">
-      <h1 className="subject_name">{id} </h1>
+      <h1 className="subject_name">{longen(id)} </h1>
       {Object.keys(props.subjects[id]).map(year => {
         return (
           <div className="subject_year">
